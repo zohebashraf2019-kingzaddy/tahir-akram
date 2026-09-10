@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="The journey, business portfolio, community impact, and ongoing projects of Tahir Akram, entrepreneur, advocate, developer, restaurant owner, and community leader." />
+  <title>Tahir Akram | Entrepreneur • Advocate • Community Builder</title>
+  <style>
+    :root{
+      --ink:#10231c;
+      --deep:#123b2a;
+      --green:#1f5a3d;
+      --sage:#dfe9df;
+      --gold:#c9a34a;
+      --cream:#f7f3e8;
+      --white:#ffffff;
+      --muted:#66766f;
+      --line:rgba(16,35,28,.12);
+      --shadow:0 18px 55px rgba(16,35,28,.14);
+      --radius:26px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--cream);color:var(--ink);line-height:1.6}
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    .wrap{width:min(1180px,92%);margin:auto}
+    .eyebrow{font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;font-weight:800;color:var(--gold)}
+    h1,h2,h3{line-height:1.1;margin:0 0 .65rem}
+    h1{font-size:clamp(3.2rem,8vw,7rem);letter-spacing:-.055em}
+    h2{font-size:clamp(2rem,4vw,3.8rem);letter-spacing:-.035em}
+    h3{font-size:1.25rem}
+    p{margin:.55rem 0 0;color:#33483e}
+    .btn{display:inline-flex;align-items:center;gap:.6rem;padding:.95rem 1.25rem;border-radius:999px;font-weight:800;border:1px solid transparent;transition:.2s ease}
+    .btn.primary{background:var(--gold);color:#1c231f}
+    .btn.secondary{border-color:rgba(255,255,255,.35);color:white;background:rgba(255,255,255,.06)}
+    .btn:hover{transform:translateY(-2px)}
+    nav{position:fixed;top:0;left:0;right:0;z-index:20;background:rgba(247,243,232,.88);backdrop-filter:blur(15px);border-bottom:1px solid var(--line)}
+    .nav-inner{height:76px;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+    .brand{font-weight:900;letter-spacing:-.02em;font-size:1.15rem}
+    .brand small{display:block;font-size:.67rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:700}
+    .nav-links{display:flex;gap:1.15rem;align-items:center;font-size:.92rem;font-weight:700}
+    .nav-links a:hover{color:var(--green)}
+    .hero{padding:126px 0 64px;background:
+      radial-gradient(circle at 85% 10%, rgba(201,163,74,.22), transparent 28%),
+      linear-gradient(135deg,#0f2d21 0%,#164a34 58%,#0d241b 100%);color:white;overflow:hidden}
+    .hero-grid{display:grid;grid-template-columns:1.13fr .87fr;gap:54px;align-items:center}
+    .hero p{color:#d7e2db;max-width:720px;font-size:1.13rem}
+    .hero .lead{font-size:clamp(1.15rem,2vw,1.42rem)}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:1.5rem}
+    .hero-card{position:relative}
+    .portrait{border-radius:40px;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.32);border:1px solid rgba(255,255,255,.18);aspect-ratio:3/4}
+    .portrait img{width:100%;height:100%;object-fit:cover}
+    .float-card{position:absolute;left:-35px;bottom:28px;background:#f9f4e9;color:var(--ink);padding:1rem 1.15rem;border-radius:18px;box-shadow:var(--shadow);max-width:250px}
+    .float-card strong{display:block;font-size:1.1rem}
+    .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.18);border-radius:22px;overflow:hidden;margin-top:2.3rem;max-width:760px}
+    .stat{padding:1rem 1.1rem;background:rgba(255,255,255,.05)}
+    .stat strong{display:block;font-size:1.5rem;color:white}
+    .stat span{font-size:.82rem;color:#bcd0c5}
+    section{padding:86px 0}
+    .section-head{display:grid;grid-template-columns:.72fr 1.28fr;gap:40px;align-items:end;margin-bottom:36px}
+    .section-head p{max-width:680px}
+    .story-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:36px}
+    .quote-card{background:var(--deep);color:white;border-radius:var(--radius);padding:36px;min-height:360px;display:flex;flex-direction:column;justify-content:space-between;box-shadow:var(--shadow)}
+    .quote-card p{color:#d7e2db;font-size:1.2rem}
+    .quote-mark{font-size:5rem;line-height:.8;color:var(--gold);font-family:Georgia,serif}
+    .timeline{display:grid;gap:14px}
+    .timeline-item{display:grid;grid-template-columns:120px 1fr;gap:20px;padding:22px;border:1px solid var(--line);background:rgba(255,255,255,.55);border-radius:20px}
+    .timeline-item .year{font-weight:900;color:var(--green);font-size:1.05rem}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{background:white;border:1px solid var(--line);border-radius:24px;padding:26px;box-shadow:0 12px 36px rgba(16,35,28,.06)}
+    .card .icon{width:48px;height:48px;border-radius:14px;background:var(--sage);display:grid;place-items:center;font-weight:900;color:var(--green);margin-bottom:18px}
+    .card ul{padding-left:1.05rem;margin:.8rem 0 0;color:#42564d}
+    .feature{background:#e9efe7}
+    .project-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+    .project{background:white;border-radius:26px;overflow:hidden;border:1px solid var(--line);min-height:300px;display:flex;flex-direction:column}
+    .project-top{padding:30px;background:linear-gradient(135deg,#183f2f,#276044);color:white;min-height:170px}
+    .project:nth-child(2) .project-top{background:linear-gradient(135deg,#6b4b1b,#c09a3e)}
+    .project:nth-child(3) .project-top{background:linear-gradient(135deg,#243c56,#47708f)}
+    .project:nth-child(4) .project-top{background:linear-gradient(135deg,#4a2b52,#8a5a91)}
+    .project-top p{color:rgba(255,255,255,.8)}
+    .project-body{padding:24px;flex:1}
+    .impact{background:var(--deep);color:white}
+    .impact p{color:#cbd9d1}
+    .impact-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center}
+    .impact-numbers{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+    .impact-number{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:20px;padding:24px}
+    .impact-number strong{display:block;font-size:2rem;color:var(--gold)}
+    .socials{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .social{padding:24px;border-radius:20px;border:1px solid var(--line);background:white;font-weight:800;display:flex;justify-content:space-between;align-items:center}
+    .social:hover{box-shadow:var(--shadow);transform:translateY(-2px)}
+    .press-list{display:grid;gap:12px;margin-top:25px}
+    .press-item{display:flex;gap:16px;justify-content:space-between;align-items:center;padding:18px 20px;border:1px solid var(--line);border-radius:18px;background:rgba(255,255,255,.6)}
+    .press-item small{color:var(--muted)}
+    .note{background:#fff7df;border:1px solid #ead49d;padding:18px 20px;border-radius:16px;margin-top:24px;color:#5a4921}
+    footer{background:#0d241b;color:white;padding:44px 0}
+    footer p{color:#b9ccc2}
+    .footer-grid{display:grid;grid-template-columns:1fr auto;gap:20px;align-items:end}
+    @media(max-width:900px){
+      .nav-links{display:none}.hero-grid,.section-head,.story-grid,.impact-grid{grid-template-columns:1fr}.hero-card{max-width:580px;margin:auto}.float-card{left:14px}.cards{grid-template-columns:1fr}.project-grid{grid-template-columns:1fr}.socials{grid-template-columns:1fr}.section-head{gap:10px}.timeline-item{grid-template-columns:1fr}.stats{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="wrap nav-inner">
+      <a href="#top" class="brand">TAHIR AKRAM<small>Entrepreneur • Advocate • Builder</small></a>
+      <div class="nav-links">
+        <a href="#journey">Journey</a>
+        <a href="#businesses">Businesses</a>
+        <a href="#projects">Projects</a>
+        <a href="#impact">Impact</a>
+        <a href="#media">Media</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero" id="top">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="eyebrow">A life built across two countries</div>
+        <h1>Tahir<br>Akram</h1>
+        <p class="lead">Advocate, entrepreneur, real estate developer, restaurant owner, and community-minded business leader with roots in Pakistan and a growing footprint in Nevada.</p>
+        <p>This portfolio is designed to tell the full story: the legal background, the move to the United States, the businesses built along the way, the projects now taking shape, and the people impacted through work, mentorship, and community service.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#journey">Explore the journey ↓</a>
+          <a class="btn secondary" href="https://www.youtube.com/channel/UCGwpRz1Lf0t5b6Zk4eNR46Q" target="_blank" rel="noopener">Visit YouTube ↗</a>
+        </div>
+        <div class="stats">
+          <div class="stat"><strong>Pakistan + USA</strong><span>Business and professional journey</span></div>
+          <div class="stat"><strong>3 locations</strong><span>Pizza Guys locations operated over time</span></div>
+          <div class="stat"><strong>800+ students</strong><span>Reached through a 2017 Sparks school giveaway</span></div>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="portrait"><img src="assets/tahir-akram.jpg" alt="Tahir Akram" /></div>
+        <div class="float-card"><span class="eyebrow">Portfolio Theme</span><strong>Leadership through business, law, and community.</strong></div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="journey">
+      <div class="wrap">
+        <div class="section-head">
+          <div><div class="eyebrow">The Journey</div><h2>From Attock to Nevada</h2></div>
+          <p>Tahir Akram’s story spans law, entrepreneurship, restaurants, construction, development, and community service. This first version uses the public information currently available and leaves room for a fuller personal biography once more dates, photos, milestones, and firsthand details are added.</p>
+        </div>
+        <div class="story-grid">
+          <div class="quote-card">
+            <div class="quote-mark">“</div>
+            <p>A portfolio should show more than titles. It should show how one chapter created the next, and how business success can become a platform for opportunity, mentorship, and community growth.</p>
+            <div><strong>Tahir Akram Portfolio</strong><br><span style="color:#9eb5a9">Pakistan • Nevada • Beyond</span></div>
+          </div>
+          <div class="timeline">
+            <div class="timeline-item"><div class="year">Education</div><div><h3>Early years in Pakistan</h3><p>Public profile information lists attendance at F.G. Public High School Attock Cantt. and PAF/PAAF Falcon College Minhas in Kamra.</p></div></div>
+            <div class="timeline-item"><div class="year">2006–2009</div><div><h3>Legal profession</h3><p>A Punjab Bar Council list records Tahir Akram in Attock with a lower-court date of December 2006 and High Court date of January 2009. Public profile information also references service with the District Bar Association Attock.</p></div></div>
+            <div class="timeline-item"><div class="year">2012+</div><div><h3>Restaurant entrepreneurship in Northern Nevada</h3><p>Public reporting says Akram purchased a Pizza Guys location in Sparks in 2012, later developed another location in Reno, and continued expanding his restaurant operations.</p></div></div>
+            <div class="timeline-item"><div class="year">Today</div><div><h3>Multi-industry business portfolio</h3><p>Current public coverage describes him as a serial entrepreneur with restaurant, construction, and financial business interests, alongside development activity in Nevada and Pakistan.</p></div></div>
+          </div>
+        </div>
+        <div class="note"><strong>Draft biography:</strong> We should replace broad timeline labels with exact dates and firsthand stories once Tahir provides them. That will make this section feel personal rather than like a résumé.</div>
+      </div>
+    </section>
+
+    <section class="feature" id="businesses">
+      <div class="wrap">
+        <div class="section-head">
+          <div><div class="eyebrow">Business Portfolio</div><h2>Building across industries</h2></div>
+          <p>The site is structured so each company can later receive its own logo, story, project gallery, location information, and external website link.</p>
+        </div>
+        <div class="cards">
+          <article class="card"><div class="icon">01</div><h3>Restaurant Operations</h3><p>Multi-unit restaurant ownership in Northern Nevada, including Pizza Guys locations in Reno and Sparks.</p><ul><li>Operations and growth</li><li>Team development</li><li>Customer service</li><li>Community engagement</li></ul></article>
+          <article class="card"><div class="icon">02</div><h3>Real Estate & Construction</h3><p>Development and construction activity in Nevada and Pakistan, with room to feature current builds, completed properties, and future developments.</p><ul><li>Construction projects</li><li>Property development</li><li>Investment projects</li><li>Cross-border portfolio</li></ul></article>
+          <article class="card"><div class="icon">03</div><h3>Professional & Business Services</h3><p>Experience that connects legal training, business ownership, entrepreneurship, and financial services.</p><ul><li>Legal background</li><li>Small business experience</li><li>Financial business interests</li><li>Entrepreneurship</li></ul></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="wrap">
+        <div class="section-head">
+          <div><div class="eyebrow">Current Projects</div><h2>What comes next</h2></div>
+          <p>These cards are intentionally editable. As you send company names, construction photos, project addresses, investment details, or Pakistan project information, we can turn each one into a full project showcase.</p>
+        </div>
+        <div class="project-grid">
+          <article class="project"><div class="project-top"><div class="eyebrow">Nevada</div><h3>Restaurant Growth</h3><p>Expanding restaurant operations while building teams and new customer experiences.</p></div><div class="project-body"><strong>Featured: Pizza Guys</strong><p>Public coverage says the Plumb Lane restaurant opened in 2025 as the brand’s largest location at the time and introduced wings and fries at that location.</p></div></article>
+          <article class="project"><div class="project-top"><div class="eyebrow">Nevada</div><h3>Construction & Development</h3><p>Current development projects can be featured with progress photography, project scope, and completion milestones.</p></div><div class="project-body"><strong>Content needed next</strong><p>Company name, active project list, project cities, before/after photos, renderings, and contact or inquiry details.</p></div></article>
+          <article class="project"><div class="project-top"><div class="eyebrow">Pakistan</div><h3>Development Portfolio</h3><p>A dedicated section for construction, real estate, and investment work in Pakistan.</p></div><div class="project-body"><strong>Content needed next</strong><p>Business names, locations, project sizes, photos, partners, development stage, and any public press coverage.</p></div></article>
+          <article class="project"><div class="project-top"><div class="eyebrow">Global</div><h3>Future Ventures</h3><p>A flexible area for new companies, partnerships, investments, and community initiatives.</p></div><div class="project-body"><strong>Built to grow</strong><p>The site can expand into separate company pages as the portfolio grows, without changing the core personal brand.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="impact" id="impact">
+      <div class="wrap impact-grid">
+        <div>
+          <div class="eyebrow">Community Impact</div>
+          <h2>Business as a platform for people</h2>
+          <p>Public reporting has highlighted Akram’s focus on mentorship and on giving young adults work experience, skills, confidence, and direction. A 2017 community story also documented a Pizza Guys giveaway for students at Bud Beasley Elementary School in Sparks.</p>
+        </div>
+        <div class="impact-numbers">
+          <div class="impact-number"><strong>800+</strong><span>Students included in the 2017 school pizza-card giveaway</span></div>
+          <div class="impact-number"><strong>Mentorship</strong><span>Young-adult development highlighted in Pizza Guys coverage</span></div>
+          <div class="impact-number"><strong>Local Jobs</strong><span>Restaurant operations create training and employment opportunities</span></div>
+          <div class="impact-number"><strong>Two Countries</strong><span>Professional and business activity spanning Pakistan and the United States</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="media">
+      <div class="wrap">
+        <div class="section-head">
+          <div><div class="eyebrow">Media & Social</div><h2>Follow the journey</h2></div>
+          <p>This section puts Tahir’s public channels in one place and creates room for future interviews, project videos, speeches, press features, and construction updates.</p>
+        </div>
+        <div class="socials">
+          <a class="social" href="https://www.facebook.com/tahir.akram.56/" target="_blank" rel="noopener"><span>Facebook</span><span>↗</span></a>
+          <a class="social" href="https://www.youtube.com/channel/UCGwpRz1Lf0t5b6Zk4eNR46Q" target="_blank" rel="noopener"><span>YouTube Channel</span><span>↗</span></a>
+          <a class="social" href="https://www.tiktok.com/@tahirakramadv9" target="_blank" rel="noopener"><span>TikTok @tahirakramadv9</span><span>↗</span></a>
+        </div>
+
+        <div class="press-list">
+          <a class="press-item" href="https://www.franchising.com/news/20250807_pizza_guys_celebrates_grand_opening_of_largest_location_in_reno.html" target="_blank" rel="noopener"><div><strong>Pizza Guys celebrates Reno grand opening</strong><br><small>Franchising.com / Pizza Guys • 2025</small></div><span>Read ↗</span></a>
+          <a class="press-item" href="https://ediblerenotahoe.com/edibleupdatesmain/edible-updates-openings/page/3/" target="_blank" rel="noopener"><div><strong>Edible Reno-Tahoe: Pizza Guys opening</strong><br><small>Business background and Reno expansion • 2025</small></div><span>Read ↗</span></a>
+          <a class="press-item" href="https://www.kolotv.com/content/news/Restaurant-donates-pizzas-to-every-student-at-a-Sparks-elementary-school-457879383.html" target="_blank" rel="noopener"><div><strong>Community giveaway at Sparks elementary school</strong><br><small>KOLO 8 News • 2017</small></div><span>Read ↗</span></a>
+          <a class="press-item" href="https://pbbarcouncil.com/wp-content/uploads/2022/12/ATTOCK-H.C993.pdf" target="_blank" rel="noopener"><div><strong>Punjab Bar Council advocate listing</strong><br><small>Attock High Court advocates list</small></div><span>View ↗</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-grid">
+      <div><div class="brand">TAHIR AKRAM<small>Entrepreneur • Advocate • Community Builder</small></div><p>Portfolio website draft. Additional businesses, projects, photos, interviews, and verified biography details can be added as they are collected.</p></div>
+      <div>© <span id="year"></span> Tahir Akram</div>
+    </div>
+  </footer>
+  <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body>
+</html>
